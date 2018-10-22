@@ -1,5 +1,8 @@
-:set number
-"colorscheme murphy
+set nocompatible
+set autoindent
+set number
+set showcmd
+set incsearch
 
 autocmd BufEnter * colorscheme murphy
 autocmd BufEnter *.java colorscheme delek 
@@ -11,18 +14,6 @@ set showmatch
 let @a='printf("\n");'
 set numberwidth=3
 
-function! NoSearchHighligh()
-	set noh
-endfunction
 
-map <c-h> :call NoSearchHighligh
+noremap <c-h> :noh <Enter>
 
-function! CPrint()
-	execute	i
-	printf("\n");
-	execute 0
-	execute	f"
-	execute a
-endfunction
-
-map <c-p> :call CPrint
