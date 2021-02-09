@@ -1,2 +1,1 @@
-# vim
-test
+# My vim configuration
